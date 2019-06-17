@@ -1,30 +1,92 @@
 {
-"questions":[
-    {"q": "aai", "ans":["拉", "璽", "懷"]},
-    {"q": "aau", "ans":["考", "貓", "姣"]},
-    {"q": "ui", "ans":["灰", "劊", "陪"]},
-    {"q": "iu", "ans":["小", "囂", "寮"]},
-    {"q": "oi", "ans":["海", "開", "來"]},
-    {"q": "ou", "ans":["毛", "好", "蘇"]}
-],
-"wordlist":[
-    {"word": "拉","vowel": "aai"},
-    {"word": "考","vowel": "aau"},
-    {"word": "璽","vowel": "aai"},
-    {"word": "灰","vowel": "ui"},
-    {"word": "小","vowel": "iu"},
-    {"word": "開","vowel": "oi"},
-    {"word": "懷","vowel": "aai"},
-    {"word": "海","vowel": "oi"},
-    {"word": "寮","vowel": "iu"},
-    {"word": "貓","vowel": "aau"},
-    {"word": "蘇","vowel": "ou"},
-    {"word": "毛","vowel": "ou"},
-    {"word": "姣","vowel": "aau"},
-    {"word": "劊","vowel": "ui"},
-    {"word": "來","vowel": "oi"},
-    {"word": "囂","vowel": "iu"},
-    {"word": "陪","vowel": "ui"},
-    {"word": "好","vowel": "ou"}
-]
+"quiz1":{
+    "questions":[
+        {"q": "aai", "ans":["拉", "璽", "懷"]},
+        {"q": "aau", "ans":["考", "貓", "姣"]},
+        {"q": "ui", "ans":["灰", "劊", "陪"]},
+        {"q": "iu", "ans":["小", "囂", "寮"]},
+        {"q": "oi", "ans":["海", "開", "來"]},
+        {"q": "ou", "ans":["毛", "好", "蘇"]}
+    ],
+    "wordlist":[
+        {"word": "拉","vowel": "aai"},
+        {"word": "考","vowel": "aau"},
+        {"word": "璽","vowel": "aai"},
+        {"word": "灰","vowel": "ui"},
+        {"word": "小","vowel": "iu"},
+        {"word": "開","vowel": "oi"},
+        {"word": "懷","vowel": "aai"},
+        {"word": "海","vowel": "oi"},
+        {"word": "寮","vowel": "iu"},
+        {"word": "貓","vowel": "aau"},
+        {"word": "蘇","vowel": "ou"},
+        {"word": "毛","vowel": "ou"},
+        {"word": "姣","vowel": "aau"},
+        {"word": "劊","vowel": "ui"},
+        {"word": "來","vowel": "oi"},
+        {"word": "囂","vowel": "iu"},
+        {"word": "陪","vowel": "ui"},
+        {"word": "好","vowel": "ou"}
+    ]
+},
+"quiz2":{
+    "questions":[
+        {"q": "ou", "ans":["毛", "好", "蘇"]},
+        {"q": "oi", "ans":["海", "開", "來"]},
+        {"q": "aau", "ans":["考", "貓", "姣"]},
+        {"q": "iu", "ans":["小", "囂", "寮"]},
+        {"q": "aai", "ans":["拉", "璽", "懷"]},
+        {"q": "ui", "ans":["灰", "劊", "陪"]}
+    ],
+    "wordlist":[
+        {"word": "來","vowel": "oi"},
+        {"word": "姣","vowel": "aau"},
+        {"word": "陪","vowel": "ui"},
+        {"word": "灰","vowel": "ui"},
+        {"word": "拉","vowel": "aai"},
+        {"word": "開","vowel": "oi"},
+        {"word": "懷","vowel": "aai"},
+        {"word": "海","vowel": "oi"},
+        {"word": "璽","vowel": "aai"},
+        {"word": "貓","vowel": "aau"},
+        {"word": "蘇","vowel": "ou"},
+        {"word": "毛","vowel": "ou"},
+        {"word": "小","vowel": "iu"},
+        {"word": "劊","vowel": "ui"},
+        {"word": "考","vowel": "aau"},
+        {"word": "囂","vowel": "iu"},
+        {"word": "好","vowel": "ou"},
+        {"word": "寮","vowel": "iu"}
+    ]
+},
+"quiz3":{
+    "questions":[
+        {"q": "ui", "ans":["灰", "劊", "陪"]},
+        {"q": "iu", "ans":["小", "囂", "寮"]},
+        {"q": "aai", "ans":["拉", "璽", "懷"]},
+        {"q": "oi", "ans":["海", "開", "來"]},
+        {"q": "aau", "ans":["考", "貓", "姣"]},
+        {"q": "ou", "ans":["毛", "好", "蘇"]}
+    ],
+    "wordlist":[
+        {"word": "灰","vowel": "ui"},
+        {"word": "小","vowel": "iu"},
+        {"word": "好","vowel": "ou"},
+        {"word": "拉","vowel": "aai"},
+        {"word": "蘇","vowel": "ou"},
+        {"word": "毛","vowel": "ou"},
+        {"word": "陪","vowel": "ui"},
+        {"word": "囂","vowel": "iu"},
+        {"word": "劊","vowel": "ui"},
+        {"word": "來","vowel": "oi"},
+        {"word": "璽","vowel": "aai"},
+        {"word": "考","vowel": "aau"},
+        {"word": "姣","vowel": "aau"},
+        {"word": "開","vowel": "oi"},
+        {"word": "貓","vowel": "aau"},
+        {"word": "懷","vowel": "aai"},
+        {"word": "寮","vowel": "iu"},
+        {"word": "海","vowel": "oi"}
+    ]
+}
 }
