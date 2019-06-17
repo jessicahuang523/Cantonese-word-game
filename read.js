@@ -8,21 +8,23 @@ request.onload = function(){
     looping(wordFile);
 }
 
-var currQuiz = 0;
+var currQuestion = 0;
 var corWord = 0;
 var wrongWord = 0;
 
 function looping(wordfile){
-    window.Quiz = wordfile['questions'];
-    window.Words = wordfile['wordlist'];
-    window.numOfQuiz = Quiz.length;
+    window.currQuiz = document.getElementsByTagName('title')[0].getAttribute('id');
+    window.Quiz = wordfile['quiz'+currQuiz];
+    window.Question = Quiz['questions'];
+    window.Words = Quiz['wordlist'];
+    window.numOfQuestion = Question.length;
     setting();
 }
 
 function setting(){                
-    var title = Quiz[currQuiz].q;
+    var title = Question[currQuestion].q;
     document.getElementById('title').innerHTML = title;
-    document.getElementById('question').innerHTML = currQuiz+1;
+    document.getElementById('question').innerHTML = currQuestion+1;
     for(i=0;i<4;i++){
         var par = document.createElement('div');
         par.className = "row justify-content-around";
@@ -50,7 +52,7 @@ function setting(){
             cld.className = "col-sm-1"
             cld.textContent = Words[j].word;
             cld.onclick = function(){
-                if(Quiz[currQuiz].ans.includes(this.innerHTML)){
+                if(Question[currQuestion].ans.includes(this.innerHTML)){
                     correct(this);
                 }
                 else{
@@ -63,6 +65,7 @@ function setting(){
         document.getElementById('content').insertBefore(par, button);
     }
     document.getElementById('nextButton').disabled = true;
+    document.getElementById('correct').innerHTML = corWord;
 }
 
 function correct(word){
@@ -72,11 +75,11 @@ function correct(word){
     word.onclick = '';
     if(corWord==3){
         $('.col-sm-1').attr('onclick', '');
-        if(currQuiz==numOfQuiz-1){
-            document.getElementById('questionP').innerHTML = 'Congratulations! You have finished all the quizes!';
+        if(currQuestion==numOfQuestion-1){
+            finish();
         }
         else{
-            document.getElementById('continue').innerHTML += ' Great! Click on the button to continue the quiz.'
+            document.getElementById('continue').innerHTML += ' Great! Click on "Next Question" to continue.'
             document.getElementById('nextButton').disabled = false;
         }
     }
@@ -91,10 +94,32 @@ function wrong(word){
 
 function nextQuestion(){
     $('.col-sm-1').css('color', 'black');
-    currQuiz += 1;
+    currQuestion += 1;
     document.getElementById('content').innerHTML = '<div id="button"><button id="nextButton" onclick="nextQuestion()" class="btn btn-secondary">Next Question</button></div>';
     corWord = 0;
     document.getElementById('correct').innerHTML = '';
     document.getElementById('continue').innerHTML = '';
     setting();
+}
+
+function finish(){
+    document.getElementById('questionP').innerHTML = 'Congratulations! You have finished all the questions of this chapter!';
+    var score = Math.round(((numOfQuestion*3-0.5*wrongWord)/18)*100);
+    var total_score = document.createElement('p');
+    if(score <= 0) score = 0;
+    total_score.textContent = `Total score: ${score}`;
+    document.getElementById('result').appendChild(total_score);
+    var backToMenu = document.createElement('form');
+    backToMenu.action = './menu.html';
+    var nextQuizButton = document.createElement('button');
+    nextQuizButton.className = 'btn btn-info btn-block';
+    nextQuizButton.textContent = "Back to menu";
+    nextQuizButton.onclick = function(){
+        currQuiz += 1;
+    }
+    backToMenu.appendChild(nextQuizButton);
+    document.getElementById('result').appendChild(backToMenu);
+    var current = 'ch'+currQuiz;
+    console.log(current);
+    localStorage.setItem(current, score);
 }

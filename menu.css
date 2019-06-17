@@ -1,0 +1,9 @@
+li{
+    padding: 20px;
+}
+
+#menu{
+    position: fixed;
+    top: 30%;
+    left: 45%;
+}
